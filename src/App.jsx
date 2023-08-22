@@ -14,7 +14,6 @@ import '@splidejs/react-splide/css/core';
 import './components/homepage/homepage.scss'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
-import Slider from './components/homepage/Slider'
 import HomePage from './components/homepage/HomePage';
 
 function App() {

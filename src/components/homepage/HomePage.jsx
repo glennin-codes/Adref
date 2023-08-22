@@ -1,10 +1,10 @@
 import React from 'react'
-import Slider from './Slider'
-import Events from './Events'
+import Events from './Events/Events'
 import News from './News/News'
 import Publications from './Publications'
 import Video from './Video'
 import Sponsors from './Sponsors/Sponsors'
+import Slider from './Slider/Slider'
 
 const HomePage = () => {
   return (
