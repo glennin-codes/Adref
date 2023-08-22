@@ -15,14 +15,25 @@ import './components/homepage/homepage.scss'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import HomePage from './components/homepage/HomePage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   
   return (
     <>
       <Navbar/>
-      <HomePage/>
-      <Footer/>
+    <BrowserRouter>
+  
+      <Routes>
+        <Route element={<HomePage/>} exact path="/"/>
+        
+      </Routes>
+    
+    </BrowserRouter>
+    <Footer/>
+    
+     
+   
     </>
   )
 }

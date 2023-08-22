@@ -6,9 +6,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import {  useTheme, useMediaQuery } from "@chakra-ui/react";
 
 const Slider = () => {
-  const theme = useTheme();
+
   const [isXsScreen]=useMediaQuery("(max-width: 576px)");
-  console.log(isXsScreen);
   const splideRef = useRef(null); // Ref to the Splide instance
 
   const handlePrevSlide = () => {
@@ -26,7 +25,7 @@ const Slider = () => {
     <>
       <div className="slider-container">
         <Splide
-      
+      ref={splideRef} 
           aria-label="My Favorite Images"
           options={{
             pagination: false,
@@ -40,7 +39,7 @@ const Slider = () => {
 
           }}
         >
-          <SplideSlide    ref={splideRef} className="splide-slide">
+          <SplideSlide   className="splide-slide">
           <div className="slide-content">
             {isXsScreen
             ?<h1>EcoSystem Restoration</h1>:
@@ -65,7 +64,7 @@ const Slider = () => {
               </div>
             </div>
           </SplideSlide>
-          <SplideSlide    ref={splideRef} className="splide-slide">
+          <SplideSlide    className="splide-slide">
           <div className="slide-content">
              {isXsScreen?
               <h1>Circular economy</h1> :
