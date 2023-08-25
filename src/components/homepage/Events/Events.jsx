@@ -1,23 +1,35 @@
-import React from 'react'
+import React from 'react';
+import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
+
+const eventDetails = [
+  { date: '12 October', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.' },
+  { date: '12 October', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.' },
+  { date: '12 October', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.' },
+];
 
 const Events = () => {
   return (
-    <div className="events-container">
-        <h2>Upcoming Events</h2>
-    <div className='event-card'>
-        <h3>12 October</h3>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.</h3>
-    </div>
-    <div className='event-card'>
-        <h3>12 October</h3>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.</h3>
-    </div>
-    <div className='event-card'>
-        <h3>12 October</h3>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatibus.</h3>
-    </div>
-    </div>
-  )
+    <Box className="events-container">
+      <h2>Upcoming Events</h2>
+      <Accordion allowMultiple>
+        {eventDetails.map((event, index) => (
+          <AccordionItem key={index}>
+            <h3>
+              <AccordionButton>
+                <AccordionIcon  color="magenta"/>
+                {event.date}
+              </AccordionButton>
+            </h3>
+            <AccordionPanel>
+              <p
+              
+              >{event.description}</p>
+            </AccordionPanel>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Box>
+  );
 }
 
-export default Events
+export default Events;
