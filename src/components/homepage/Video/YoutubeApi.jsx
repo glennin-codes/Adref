@@ -45,17 +45,19 @@ const YouTubeAPI = () => {
 
   return (
    
-    <Container>
+    <Box
+    m={8}
+    >
       <Grid templateColumns={["1fr", "1fr", "1fr", "8fr 4fr"]} gap={3}>
         <Grid item colSpan={[12, 12, 12, 8]}>
           {selectedVideo && (
-            <Box bg="white" p={4} boxShadow="md">
-              <Text fontSize="xl" fontWeight="bold">
+            <Box  p={4} >
+              <Text fontSize="lg" fontWeight="bold">
                 {selectedVideo.snippet.title}
               </Text>
               <iframe
                 width="100%"
-                height="315"
+                height="100%"
                 src={`https://www.youtube.com/embed/${selectedVideo.id.videoId}`}
                 title={selectedVideo.snippet.title}
                 frameBorder="0"
@@ -66,7 +68,7 @@ const YouTubeAPI = () => {
         </Grid>
 
         <Grid item colSpan={[12, 12, 12, 4]}>
-          <Box maxHeight={["auto", "auto", "auto", "300px"]} overflowY="auto">
+          <Box maxHeight={["200px", "250", "300", "400px"]} overflowY="auto">
             {videos.map((video) => (
               <Box
                 key={video.id.videoId}
@@ -77,20 +79,20 @@ const YouTubeAPI = () => {
                 onClick={() => handleVideoSelect(video)}
                 boxShadow="md"
               >
-                <Text fontSize="lg" fontWeight="bold">
+                <Text fontSize="sm" fontWeight="bold">
                   {video.snippet.title}
                 </Text>
                 <img
                   src={video.snippet.thumbnails.medium.url}
                   alt={video.snippet.title}
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: "30%", height: "30%" }}
                 />
               </Box>
             ))}
           </Box>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

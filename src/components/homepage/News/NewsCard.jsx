@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const NewsCard = () => {
   return (
+    <div>
     <Splide 
     options={{
         pagination:false,
@@ -58,6 +59,7 @@ const NewsCard = () => {
     </div>
 </SplideSlide>
     </Splide>
+    </div>
   )
 }
 
