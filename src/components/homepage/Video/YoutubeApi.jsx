@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Grid, Box, Text } from "@chakra-ui/react";
+import { Container, Grid, Box, Text, Img } from "@chakra-ui/react";
 import axios from "axios";
 
 const YouTubeAPI = () => {
@@ -82,7 +82,7 @@ const YouTubeAPI = () => {
                 <Text fontSize="sm" fontWeight="bold">
                   {video.snippet.title}
                 </Text>
-                <img
+                <Img
                   src={video.snippet.thumbnails.medium.url}
                   alt={video.snippet.title}
                   style={{ width: "30%", height: "30%" }}
