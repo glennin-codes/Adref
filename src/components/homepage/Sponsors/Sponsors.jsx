@@ -1,12 +1,12 @@
 import React from 'react'
 import SponsorCard from './SponsorCard'
-
+import { Box } from '@chakra-ui/react';
 const Sponsors = () => {
   return (
-    <div className='sponsor-container'>
+    <Box className='sponsor-container'>
       <h2>Some Of Our Sponsors</h2>
       <SponsorCard/>
-    </div>
+    </Box>
   )
 }
 

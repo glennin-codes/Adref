@@ -1,12 +1,13 @@
 import React from 'react'
 import NewsCard from './NewsCard';
+import { Box } from '@chakra-ui/react';
 
 const News = () => {
   return (
-<div className="news-container">
+<Box className="news-container">
   <h2>Latest News</h2>
   <NewsCard/>
-</div>
+</Box>
   )
 }
 

@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const SponsorCard = () => {
   return (
-    <div>
+    <>
     <Splide 
     options={{
         pagination:false,
@@ -54,7 +54,7 @@ const SponsorCard = () => {
         </div>
 </SplideSlide>
     </Splide>
-    </div>
+    </>
   )
 }
 

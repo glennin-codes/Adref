@@ -7,6 +7,7 @@ import Sponsors from './Sponsors/Sponsors'
 import Slider from './Slider/Slider'
 import YouTubeAPI from './Video/YoutubeApi'
 import ImagesCardGrid from './Impact/CardsImages'
+import { Box } from '@chakra-ui/react'
 
 const images = [
   { src: '/images/teams.png?url', title: 'Ngo meeting' },
@@ -17,7 +18,7 @@ const images = [
 ];
 const HomePage = () => {
   return (
-    <div>
+    <Box>
         <Slider/>
         <Events/>
         <News/>
@@ -25,7 +26,7 @@ const HomePage = () => {
         <YouTubeAPI apiKey="AIzaSyCEXtTZiP86G5IMJpHmmEunQV6CVWuPdOI"/>
         <ImagesCardGrid images={images}/>
         <Sponsors/>
-    </div>
+    </Box>
   )
 }
 

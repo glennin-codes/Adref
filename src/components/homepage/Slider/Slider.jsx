@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import "./Slider.css"; 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import {  useTheme, useMediaQuery } from "@chakra-ui/react";
+import {  useTheme, useMediaQuery, Box } from "@chakra-ui/react";
 
 const Slider = () => {
 
@@ -23,7 +23,7 @@ const Slider = () => {
   }
   return (
     <>
-      <div className="slider-container">
+      <Box className="slider-container">
         <Splide
       ref={splideRef} 
           aria-label="My Favorite Images"
@@ -32,7 +32,7 @@ const Slider = () => {
             rewind: true,
             arrows: false, 
             autoplay: true,
-            interval: 1000,
+            interval: 3000,
             pauseOnHover: true,
             resetProgress: false,
             lazyLoad: true,
@@ -90,7 +90,7 @@ const Slider = () => {
             </div>
           </SplideSlide>
         </Splide>
-      </div>
+      </Box>
     </>
   );
 };
