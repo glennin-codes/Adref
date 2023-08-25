@@ -1,9 +1,10 @@
 import React from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Box } from '@chakra-ui/react';
 
 const SponsorCard = () => {
   return (
-    <>
+    <Box>
     <Splide 
     options={{
         pagination:false,
@@ -54,7 +55,7 @@ const SponsorCard = () => {
         </div>
 </SplideSlide>
     </Splide>
-    </>
+    </Box>
   )
 }
 
