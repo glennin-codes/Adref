@@ -7,15 +7,17 @@ const ImagesCardGrid = ({ images }) => {
   return (
     <div>
     <Text
+    className='Tittle--el'
     sx={{
-      fontSize:"lg",
-      fontWeight:800,
+     
       textAlign:"center",
       textTransform:"uppercase",
-      fontFamily:"montseratti"
+ 
     }}
     >
-      Impacts
+      Impacts.<i
+      className='explore--el'
+      >Explore More</i>
     </Text>
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} m={10} spacing={3}>
      
@@ -32,7 +34,7 @@ const ImagesCardGrid = ({ images }) => {
       borderRadius:'lg',
       transform:"translate(0.3 ease in out) ",
         
-      bg:"grey",
+      bg:"magenta",
       color:"rgb(0,0,0.5)",
       "_hover":{
         bg:"rgb(0,0,0.8)",

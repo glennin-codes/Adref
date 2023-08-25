@@ -92,7 +92,9 @@ const AboutUs = () => {
     ABOUT US
   </Text>
 </div>
-<Text fontSize="lg" textAlign="left" marginBottom="2rem">
+<Text fontSize="lg" textAlign="left" marginBottom="2rem"
+fontFamily='poppins'
+>
   <p>
     Africa Disaster Management ADREF - We are a non-governmental foundation
     based in Nairobi, Kenya. The organization was registered in 2019 under
@@ -123,7 +125,9 @@ const AboutUs = () => {
             >
               OUR VISION
             </Text>
-            <Text fontSize="lg">
+            <Text fontSize="lg"
+            fontFamily='poppins'
+            >
               To be the NGO organization leading in disaster Risk management,
               Response, Emergency and Provision for Peace.
             </Text>
@@ -137,7 +141,9 @@ const AboutUs = () => {
             >
               OUR MISSION
             </Text>
-            <Text fontSize="lg">
+            <Text fontSize="lg"
+            fontFamily='poppins'
+            >
               To build national disaster risk management in order to protect
               people, Environment, Economy and climate change adaptation
               capabilities with our partners and coordinate response and
@@ -145,6 +151,7 @@ const AboutUs = () => {
             </Text>
 
             <Text
+
             fontFamily='Montserrat ,sans-serif'
               fontSize="xl"
               fontWeight="bold"
@@ -153,7 +160,9 @@ const AboutUs = () => {
             >
               OUR CORE VALUES
             </Text>
-            <Text fontSize="lg">
+            <Text fontSize="lg"
+            fontFamily='poppins'
+            >
             <List>
               <li>Integrity</li>
               <li>Transparency</li>
@@ -174,7 +183,9 @@ const AboutUs = () => {
             >
               ORGANIZATION OBJECTIVES
             </Text>
-            <Text fontSize="lg">
+            <Text fontSize="lg"
+            fontFamily='poppins'
+            >
          <ServiceList/>
 
             </Text>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Grid, Box, Text, Img } from "@chakra-ui/react";
 import axios from "axios";
+import './Youtube.scss'
 
 const YouTubeAPI = () => {
   const [videos, setVideos] = useState([]);
@@ -20,7 +21,7 @@ const YouTubeAPI = () => {
               part: "snippet",
               maxResults: 10,
               key: "AIzaSyCEXtTZiP86G5IMJpHmmEunQV6CVWuPdOI",
-              q: "fortunedev",
+              q: "africadisastermanagementad5699",
             },
           }
         );
@@ -48,6 +49,13 @@ const YouTubeAPI = () => {
     <Box
     m={8}
     >
+      <Text
+      as='h2'
+      textAlign='center'
+     className="Tittle--el"
+      >
+       Media Activities
+      </Text>
       <Grid templateColumns={["1fr", "1fr", "1fr", "8fr 4fr"]} gap={3}>
         <Grid item colSpan={[12, 12, 12, 8]}>
           {selectedVideo && (
