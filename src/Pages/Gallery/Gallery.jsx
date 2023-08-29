@@ -44,7 +44,15 @@ const GalleryPage = () => {
       <Text mb="4" textAlign="center">
         See how we are making a difference in Africa.
       </Text>
-      {loading && <Text>Loading...</Text>}
+      {loading && (
+        <Text
+          sx={{
+            mb: "50vw",
+          }}
+        >
+          Loading...
+        </Text>
+      )}
       {error && <Text color="red.500">{error}</Text>}
       <Grid templateColumns={`repeat(${columns}, 1fr)`} gap="4">
         {images.map((image) => (
