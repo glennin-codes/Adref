@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import {  Flex, Spinner } from '@chakra-ui/react';
 import { BlogCard } from './BlogCard';
 
