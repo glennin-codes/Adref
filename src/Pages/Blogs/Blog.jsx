@@ -60,7 +60,6 @@ const BlogList = () => {
     >
       {/* Check if the loading status is true */}
       {loading ? (
-        // Display a spinner if loading is true
         <Spinner size="xl" color="blue.500"
         sx={{
          mt:"20vh",
