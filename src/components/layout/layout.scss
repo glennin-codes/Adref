@@ -73,14 +73,12 @@
 .slider-div{
     height: 60vh;
     width: 100vw;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    object-fit: contain;
-    overflow: hidden;
+    // margin: 10px 0;
+    margin: 0;
+    padding: 0;
+  
     img{
-        width: 100vw;
+        width: 100%;
         object-fit: cover;
     }
     ::before{

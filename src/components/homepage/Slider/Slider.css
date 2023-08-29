@@ -1,6 +1,8 @@
 /* Slider.css */
 .slider-container {
     position: relative;
+    margin:0;
+    
 
   }
   
@@ -88,7 +90,7 @@ color :white;
     @media (max-width: 576px) {
       /* Extra small screens (xs) */
       .slide-content h1{
-        font-size: 50%;
+        font-size: 60%;
         font-weight: 1200;
       }
     }

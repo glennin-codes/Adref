@@ -25,6 +25,11 @@ const Slider = () => {
     <>
       <Box className="slider-container">
         <Splide
+style={{
+  margin:0,
+  padding:0
+}}
+
       ref={splideRef} 
           aria-label="My Favorite Images"
           options={{

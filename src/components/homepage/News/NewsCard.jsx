@@ -1,66 +1,72 @@
-import React from 'react'
+import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Box, Text } from '@chakra-ui/react';
+
+const newsData = [
+  {
+    imageSrc:
+      'https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.',
+  },
+  {
+    imageSrc:
+      'https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.',
+  },
+  {
+    imageSrc:
+      'https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.',
+  },
+  {
+    imageSrc:
+      'https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.',
+  },
+  {
+    imageSrc:
+      'https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.',
+  },
+
+];
 
 const NewsCard = () => {
   return (
-    <>
-    <Splide 
-    options={{
-        pagination:false,
-        perPage:4,
-        rewind:true,
-        arrows:true,
-        width:'100vw',
-
+    <Splide
+      options={{
+        pagination: false,
+        perPage: 4,
+        rewind: true,
+        arrows: true,
+        width: '100vw',
         breakpoints: {
-            1440:{
-              perPage: 3,
-            },
-            640: {
-                perPage: 1,
-            },
-            900: {
-                perPage: 2,
-            },
-            // 400: {
-            //   perPage:1,
-            // }
-          }
-    }}
+          1440: {
+            perPage: 3,
+          },
+          640: {
+            perPage: 1,
+          },
+          900: {
+            perPage: 2,
+          },
+        },
+      }}
     >
-<SplideSlide>
-    <div className="news-card">
-        <img src='https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.</h3>
-    </div>
-</SplideSlide>
-<SplideSlide>
-    <div className="news-card">
-        <img src='https://images.pexels.com/photos/15663483/pexels-photo-15663483/free-photo-of-man-throwing-ball.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.</h3>
-    </div>
-</SplideSlide>
-<SplideSlide>
-    <div className="news-card">
-        <img src='https://images.pexels.com/photos/18022537/pexels-photo-18022537/free-photo-of-parrot.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.</h3>
-    </div>
-</SplideSlide>
-<SplideSlide>
-    <div className="news-card">
-        <img src='https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.</h3>
-    </div>
-</SplideSlide>
-<SplideSlide>
-    <div className="news-card">
-        <img src='https://images.pexels.com/photos/17986330/pexels-photo-17986330/free-photo-of-portrait-of-a-man-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic eaque qui blanditiis culpa ipsum.</h3>
-    </div>
-</SplideSlide>
+      {newsData.map((news, index) => (
+        <SplideSlide key={index}>
+          <Box className="news-card">
+            <img
+              src={news.imageSrc}
+              alt={`News ${index + 1}`}
+              className="news-image"
+            />
+            <Text>{news.content}</Text>
+          </Box>
+        </SplideSlide>
+      ))}
     </Splide>
-    </>
-  )
+  );
 }
 
-export default NewsCard
+export default NewsCard;
