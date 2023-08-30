@@ -15,7 +15,7 @@ import {
 import { FaUser, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
-const DonationPage = () => {
+const Donation = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [phone, setPhone] = useState("");
@@ -158,4 +158,4 @@ const DonationPage = () => {
   );
 };
 
-export default DonationPage;
+export default Donation;
