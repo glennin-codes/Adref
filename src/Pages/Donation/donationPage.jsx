@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const MotionHeading = motion(Heading);
+const MotionText = motion(Text);
 
 const DonationPage = () => {
   const [amount, setAmount] = useState("");
@@ -52,14 +53,22 @@ if(amount){
           size="4xl"
           color="white"
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1 }}
+         
+          transition={{ duration: 3}}
         >
           DONATE
         </MotionHeading>
-        <Text fontSize="2xl" color="white" fontWeight="bold">
+       <MotionText
+        initial={{opacity:0}}
+        animate={{opacity:1,scale: 3}}
+        transition={{duration:2}}
+        fontSize="2xl" color="white" fontWeight="bold"
+
+       >
+        
           Support Our Programs
-        </Text>
+        
+       </MotionText>
       </Flex>
       <Box p="10" maxW="600px" mx="auto">
         <Heading as="h2" size="lg" mb="5">
